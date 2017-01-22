@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+// calculates greatest common divisor
 int gcd (int u, int v) {
     int temp;
     
@@ -12,6 +13,7 @@ int gcd (int u, int v) {
     return u;
 }
 
+// divides combination of two numbers by the gcd
 int lcm (int u, int v) {
     int result;
     int gcd (int u, int v);
