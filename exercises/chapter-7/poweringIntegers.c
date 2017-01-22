@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-unsigned long int x_to_the_n (int x, int n)
-{
+unsigned long int x_to_the_n (int x, int n) {
     double result = x;
     int i;
     
@@ -12,8 +11,7 @@ unsigned long int x_to_the_n (int x, int n)
     return result;
 }
 
-int main (void)
-{
+int main (void) {
     int number, power;
     printf ("Enter number: ");
     scanf ("%i", &number);
