@@ -40,7 +40,7 @@ int main (void)
 	struct date input;
 	
 	printf ("Day of the week calculator: \n");
-	printf ("Enter date (dd/mm/yy) to calculate: ");
+	printf ("Enter date (dd/mm/yyyy) to calculate: ");
 	scanf ("%i/%i/%i", &input.day, &input.month, &input.year);
 	
 	dayOfTheWeek(input);
