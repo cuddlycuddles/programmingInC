@@ -9,7 +9,7 @@ struct date
 
 struct days
 {
-	char day[7];
+	char day[10];
 };
 
 void dayOfTheWeek (struct date desu)
@@ -17,9 +17,14 @@ void dayOfTheWeek (struct date desu)
 	int day;
 	int f, g;
 	
-	const struct days daysOfWeek[7] = {
-		{ 'S', 'U', 'N' }, { 'M', 'O', 'N' }, { 'T', 'U', 'E' }, { 'W', 'E', 'D' },
-		{ 'T', 'H', 'U' }, { 'F', 'R', 'I' }, { 'S', 'A', 'T' }
+	char daysOfWeek[7][10] = {
+		{ 'S', 'u', 'n', 'd', 'a', 'y' },
+		{ 'M', 'o', 'n', 'd', 'a', 'y' },
+		{ 'T', 'u', 'e', 's', 'd', 'a', 'y' },
+		{ 'W', 'e', 'd', 'n', 'e', 's', 'd', 'a', 'y' },
+		{ 'T', 'h', 'u', 'r', 's', 'd', 'a', 'y' },
+		{ 'F', 'r', 'i', 'd', 'a', 'y' },
+		{ 'S', 'a', 't', 'u', 'r', 'd', 'a', 'y' }
 	};
 	
 	f = desu.month <= 2 ? --desu.year : desu.year;
@@ -27,10 +32,7 @@ void dayOfTheWeek (struct date desu)
 	
 	day = ((1461 * f) / 4 + (153 * g) / 5 + desu.day - 621049) % 7;
 	
-	printf ("The day of the week is %c%c%c.\n",
-			daysOfWeek[day].day[0],
-			daysOfWeek[day].day[1],
-			daysOfWeek[day].day[2]);
+	printf ("The day of the week is %s\n", daysOfWeek[day]);
 }
 
 int main (void)
