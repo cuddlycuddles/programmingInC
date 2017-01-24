@@ -7,7 +7,8 @@ int      base;
 int		 digit = 0;
 bool cont = true;
 
-int getNumberAndBase (void) {
+int getNumberAndBase (void) 
+{
 	bool invalidBase = true;
 	
 	printf ("Number to be converted? ");
@@ -32,7 +33,8 @@ int getNumberAndBase (void) {
 	return 1;
 }
 
-void convertNumber (void) {
+void convertNumber (void) 
+{
 	do {
 		convertedNumber[digit] = numberToConvert % base;
 		++ digit;
@@ -41,7 +43,8 @@ void convertNumber (void) {
 	while (numberToConvert != 0);
 }
 
-void displayConvertedNumber (void) {
+void displayConvertedNumber (void) 
+{
 	const char baseDigits[16] =
 		{ '0', '1', '2', '3', '4', '5', '6', '7',
 		  '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
@@ -57,7 +60,8 @@ void displayConvertedNumber (void) {
 	printf ("\n\n");
 }
 
-int main (void) {
+int main (void) 
+{
 	while (cont) {
 		getNumberAndBase();
 		if (!cont)
