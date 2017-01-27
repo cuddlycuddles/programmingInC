@@ -23,16 +23,23 @@ int totalDays (struct date desu)
 
 int main (void)
 {
-	struct date date1 = { 8, 8, 2014 };
-	struct date date2 = { 22, 2, 2015 };
+	struct date date1;
+	struct date date2;
+	
+	printf ("Enter first date (dd/mm/yyyy): ");
+	scanf ("%i/%i/%i", &date1.day, &date1.month, &date1.year);
+	
+	printf ("\nEnter second date (dd/mm/yyyy): ");
+	scanf ("%i/%i/%i", &date2.day, &date2.month, &date2.year);
+	
 	int elapsedTime;
 	
 	elapsedTime = totalDays(date2) - totalDays(date1);
 	
-	printf ("The number of days between %i/%i/%i and %i/%i/%i is %i days.\n",
+	printf ("\nThe number of days between %i/%i/%i and %i/%i/%i is %i days.\n",
 			date1.day, date1.month, date1.year,
 			date2.day, date2.month, date2.year,
-			elapsedTime); // Output: "The number of days between 8/8/2014 and 22/2/2015 is 198 days."
+			elapsedTime);
 	
 	return 0;
 }
