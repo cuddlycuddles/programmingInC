@@ -1,0 +1,20 @@
+The while statement could have been replaced with:
+
+while ( s1[i] == s2[i] && s1[i] != '\0' )
+
+This is because in the case that both s1 and s2 are the same, they'll both stop at the same point.
+However, if they are different, then 'i' will continue to increment. The later comparison performed by the program,
+which is:
+
+if ( s1[i] == '\0' && s2[i] == '\0' )
+
+In the case that: 
+   s1[] = { 'a', 'b', 'c', '\0' };
+   s2[] = { 'a', 'b', 'c', 'd', ... '\0' };
+   the while loop will stop when 'i' is equal to 3.
+   Then the comparison between s1 and s2 will evaluate to false,
+   because s1[3] == '\0' but s2[4] == 'd'.
+   
+Overall, this shorter while statement will work because the while loop increments 'i' even if s2[i] == '\0',
+but then the first statement in the while statement will evaluate to false, as the next character in s1[i] will not be 
+equal to s2[i], which is a null character.
