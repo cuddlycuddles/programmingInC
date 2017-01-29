@@ -5,7 +5,8 @@ void substring (const char source[], int start, int count, char result[])
 {
 	int i = 0;
 	
-	while ( source[start] != '\0' && count > 0 ) // only executes if not at end of source AND if letter extraction can continue
+	while ( source[start] != '\0' && count > 0 ) /* only executes if not at end of source 
+													AND if letter extraction can continue */
 	{
 		result[i] = source[start];
 		++start;
