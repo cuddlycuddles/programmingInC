@@ -1,21 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-void substring (const char source[], int start, int count, char result[])
-{
-	int i = 0;
-	
-	while ( count > 0 )
-	{
-		result[i] = source[start];
-		++start;
-		--count;
-		++i;
-	}
-	
-	result[i] = '\0';
-}
-
 int findString (const char str[], const char sub[])
 {
 	int i, j = 0, k;
