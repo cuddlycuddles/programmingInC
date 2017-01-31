@@ -32,11 +32,11 @@ int main (void)
 	
 	char insert[] = "per";
 	
-	printf ("%s\n", string);
+	printf ("%s\n", string); // output: the wrong son
 	
 	insertString (string, insert, 10);
 	
-	printf ("%s\n", string);
+	printf ("%s\n", string); // output: the wrong person
 	
 	return 0;
 }
