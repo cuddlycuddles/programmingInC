@@ -3,16 +3,13 @@
 void insertString (char string[], char insert[], char position)
 {
 	int i, j;
-	int insertLength;
-	int stringLength;
+	unsigned long insertLength;
+	unsigned long stringLength;
 	char after[50];
 	
-	for ( i = 0; insert[i] != '\0'; ++i ) // calculate inserted string length
-		++insertLength;
+	stringLength = strlen (string);
+	insertLength = strlen (insert);
 	
-	for ( i = 0; string[i] != '\0'; ++i ) // calculate original string length
-		++stringLength;
-
 	for ( i = position, j = 0; string[i] != '\0'; ++i, ++j ) // save letters past insertion point
 		after[j] = string[i];
 	
@@ -20,8 +17,9 @@ void insertString (char string[], char insert[], char position)
 		string[i] = insert[j];
 	
 	stringLength += insertLength;
+	position += insertLength;
 	
-	for ( i = position + insertLength, j = 0; i < stringLength; ++i, ++j) // insert letters past insertion point
+	for ( i = position, j = 0; i < stringLength; ++i, ++j) // insert letters past insertion point
 		string[i] = after[j];
 }
 
