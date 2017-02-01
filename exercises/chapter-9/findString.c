@@ -29,7 +29,7 @@ int main (void)
 	
 	index = findString (string, search);
 	
-	index > 0 ? printf ("\"%s\" contains \"%s\" (starting index: %i) \n", string, search, index) :
+	index != -1 ? printf ("\"%s\" contains \"%s\" (starting index: %i) \n", string, search, index) :
 		        printf ("\"%s\" does not contain \"%s\"\n", string, search);
 	
 	return 0;
